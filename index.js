@@ -1,5 +1,6 @@
 
-function openCity(cityName,elmnt,color) {
+
+function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -9,9 +10,13 @@ function openCity(cityName,elmnt,color) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
 
 }
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+
+// this is just call default during load
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("defaultOpen").click();
+}, false);
