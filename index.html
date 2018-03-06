@@ -1,10 +1,136 @@
 
 <html>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!DOCTYPE html>
+<html>
 <head>
-<title>A very simple webpage</title>
-<basefont size=4>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
 </head>
+
+<div id="AboutMe" class="tabcontent">
+    <h3>About Me</h3>
+    <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Oslo" class="tabcontent">
+    <h3>Oslo</h3>
+    <p>Oslo is the capital of Norway.</p>
+</div>
+<div id="AboutDown" class="tabcontent1">
+    <h3>Main</h3>
+    <p>Where stuff happens..</p>
+</div>
+
+
+<button class="tablink" onclick="openCity('AboutMe', this, 'red')"id="defaultOpen">About Me</button>
+<button class="tablink" onclick="openCity('Paris', this, 'green')">Experiences</button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Projects</button>
+<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Research and Interest</button>
+
+<script>
+    function openCity(cityName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(cityName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent1, tablinks;
+        tabcontent1 = document.getElementsByClassName("tabcontent1");
+        for (i = 0; i < tabcontent1.length; i++) {
+            tabcontent1[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink1");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">About Me</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">Experiencesws</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Projects</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Research and Interest</button>
+
+<div id="AboutMe1" class="tabcontent1">
+    <h3>Home</h3>
+    <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent1">
+    <h3>News</h3>
+    <p>Some news this fine day!</p>
+</div>
+
+<div id="Contact" class="tabcontent1">
+    <h3>Contact</h3>
+    <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent1">
+    <h3>About</h3>
+    <p>Who we are and what we do.</p>
+</div>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+
 
 <body bgcolor=FFFFFF>
 
